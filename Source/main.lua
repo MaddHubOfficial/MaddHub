@@ -31,7 +31,7 @@ local CustomTheme = { Main = Color3.fromRGB(0, 0, 0), Second = Color3.fromRGB(25
     140, 255) }
 
 local syn = getgenv().syn; getgenv().syn = false; local Lib = { Orion = loadstring(game:HttpGet(
-'https://raw.githubusercontent.com/shlexware/Orion/main/source'))(), Esp = loadstring(game:HttpGet(
+'https://raw.githubusercontent.com/jensonhirst/Orion/refs/heads/main/source'))(), Esp = loadstring(game:HttpGet(
 'https://sirius.menu/rayfield')) }
 
 getgenv().syn = syn; local Gui = { Settings = { Name = Svc.MrkPlc:GetProductInfo(game.PlaceId).Name .. " | MaddHub", HidePremium = false, SaveConfig = false_if_dev(), IntroEnabled = false_if_dev(), IntroText = "maddhub.webador.com", ConfigFolder = "MaddHub_" .. Lp.Name } }
@@ -5297,7 +5297,7 @@ elseif game.PlaceId == 12017032683 then -- 096: SCP
                         Chr:PivotTo(v:GetPivot())
                         if not getgenv().FARM then break end
                         toolAction()
-                        task.wait(2)
+                        task.wait(1)
                     end
                 end
             end
