@@ -31,7 +31,7 @@ local CustomTheme = { Main = Color3.fromRGB(0, 0, 0), Second = Color3.fromRGB(25
     140, 255) }
 
 local syn = getgenv().syn; getgenv().syn = false; local Lib = { Orion = loadstring(game:HttpGet(
-'https://raw.githubusercontent.com/OrionLibrary/Orion/refs/heads/main/source.lua'))(), Esp = loadstring(game:HttpGet(
+'https://raw.githubusercontent.com/jensonhirst/Orion/refs/heads/main/source'))(), Esp = loadstring(game:HttpGet(
 'https://sirius.menu/rayfield')) }
 
 local GameTitle = Svc.MrkPlc:getProductInfo(game.PlaceId)
