@@ -1,5 +1,6 @@
 -- GetKey.lua
 -- Deprecated
+
 getgenv().COREGUI = game:GetService("CoreGui")
 if not game:IsLoaded() then
 	local notLoaded = Instance.new("Message")

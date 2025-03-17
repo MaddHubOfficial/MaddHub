@@ -34,9 +34,12 @@ local syn = getgenv().syn; getgenv().syn = false; local Lib = { Orion = loadstri
 'https://raw.githubusercontent.com/OrionLibrary/Orion/refs/heads/main/source.lua'))(), Esp = loadstring(game:HttpGet(
 'https://sirius.menu/rayfield')) }
 
-local GameTitle = Svc.MrkPlc:GetProductInfo(game.PlaceId).Name or game.PlaceId
+local GameTitle = Svc.MrkPlc:getProductInfo(game.PlaceId)
+if GameTitle then GameTitle = GameTitle.Name else GameTitle = game.PlaceId end
+print(GameTitle)
 
-getgenv().syn = syn; local Gui = { Settings = { Name =  GameTitle .. " | MaddHub", HidePremium = false, SaveConfig = false_if_dev(), IntroEnabled = false_if_dev(), IntroText = "maddhub.webador.com", ConfigFolder = "MaddHub_" .. Lp.Name } }
+getgenv().syn = syn;
+local Gui = { Settings = { Name =  GameTitle .. " | MaddHub", HidePremium = false, SaveConfig = false_if_dev(), IntroEnabled = false_if_dev(), IntroText = "maddhub.webador.com", ConfigFolder = "MaddHub_" .. Lp.Name } }
 
 local Window = Lib.Orion:MakeWindow(Gui.Settings)
 Lib.Orion.Themes["Custom"], Lib.Orion.SelectedTheme = CustomTheme, "Custom"
